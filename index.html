@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hellshop Fragrances</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="container">
+<a href="#home" class="logo">
+    <span data-key="logo_text">HELLSHOP</span>
+        <svg class="logo-underline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 25" preserveAspectRatio="none">
+        <defs>
+            <filter id="rope-texture">
+                <feTurbulence baseFrequency="0.1 0.9" numOctaves="3" type="fractalNoise" result="turbulence"/>
+                <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="2"/>
+            </filter>
+        </defs>
+        <path d="M2,13 Q50,22 98,4" filter="url(#rope-texture)"></path>
+    </svg>
+</a>        
+        <nav class="nav-links">
+            <ul class="nav-list">
+                <li><a href="#home" class="nav-link" data-key="nav_home">Home</a></li>
+                <li><a href="#fragrances" class="nav-link" data-key="nav_fragrances">Fragrances</a></li>
+                <li><a href="#contact" class="nav-link" data-key="nav_contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-meta">
+                <div class="language-switcher">
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="ge">GE</button>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                </div>
+                <div class="mobile-socials">
+                    <a href="https://www.facebook.com/people/HellsShop/61576850555855/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="burger" role="button" aria-expanded="false" aria-controls="nav" tabindex="0">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </div>
+</header>
+
+<section id="home" class="hero">
+    <video poster="./images/46866509380.png" class="hero-video" playsinline autoplay muted loop>
+        <source src="Woman Spraying Vid.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+        <h1 class="hero-title" data-key="hero_title">Unleash Your Scent.</h1>
+        <p class="hero-subtitle" data-key="hero_subtitle">Bold fragrances for the unapologetic soul.</p>
+        <a href="#fragrances" class="btn hero-btn" data-key="hero_button">Explore The Collection</a>
+    </div>
+</section>
+
+<section id="fragrances" class="fragrances-section">
+    <div class="container">
+        <h2 class="section-title" data-key="collection_title">Our Collection</h2>
+        <div class="fragrances-grid">
+            <div class="fragrance-card">
+                <div class="fragrance-image-container">
+                     <img loading="lazy" src="images/IMG-20250628-WA0014.jpg" alt="Cartier" class="fragrance-image">
+                </div>
+                <div class="fragrance-info">
+                    <h3 class="fragrance-name">Cartier - La Panthere</h3>
+                    <p class="fragrance-price">89₾</p>
+                </div>
+            </div>
+            <div class="fragrance-card">
+                 <div class="fragrance-image-container">
+                    <img loading="lazy" src="images/IMG-20250628-WA0015.jpg" alt="JPG" class="fragrance-image">
+                </div>
+                <div class="fragrance-info">
+                    <h3 class="fragrance-name">JPG - Scandal</h3>
+                    <p class="fragrance-price">99₾</p>
+                </div>
+            </div>
+            <div class="fragrance-card">
+                <div class="fragrance-image-container">
+                    <img loading="lazy" src="images/IMG-20250628-WA0017.jpg" alt="JPG" class="fragrance-image">
+                </div>
+                <div class="fragrance-info">
+                    <h3 class="fragrance-name">JPG - Scandal</h3>
+                    <p class="fragrance-price">79₾</p>
+                </div>
+            </div>
+            <div class="fragrance-card">
+                <div class="fragrance-image-container">
+                    <img loading="lazy" src="images/IMG-20250628-WA0018.jpg" alt="Creed" class="fragrance-image">
+                </div>
+                <div class="fragrance-info">
+                    <h3 class="fragrance-name">CREED - AVENTUS</h3>
+                    <p class="fragrance-price">119₾</p>
+                </div>
+            </div>
+            <div class="fragrance-card">
+                <div class="fragrance-image-container">
+                    <img loading="lazy" src="images/IMG-20250628-WA0019.jpg" alt="Molecule" class="fragrance-image">
+                </div>
+                <div class="fragrance-info">
+                    <h3 class="fragrance-name">Molecule - 01</h3>
+                    <p class="fragrance-price">69₾</p>
+                </div>
+            </div>
+            <div class="fragrance-card">
+                <div class="fragrance-image-container">
+                    <img loading="lazy" src="images/IMG-20250628-WA0020.jpg" alt="Chanel" class="fragrance-image">
+                </div>
+                <div class="fragrance-info">
+                    <h3 class="fragrance-name">CHANEL - PLATINUM EGOISTE</h3>
+                    <p class="fragrance-price">59₾</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <div class="container contact-container">
+        <div class="contact-info">
+            <h2 class="section-title contact-title" data-key="contact_title">Get In Touch</h2>
+            <p class="contact-description" data-key="contact_desc">
+                Have a question, or a special request for a fragrance? Fill out the form or contact us through one of the methods below. We're always happy to help.
+            </p>
+            <div class="contact-details">
+                <a href="tel:+995568272931" class="contact-link">
+                    <i class="fas fa-phone"></i>
+                    <span>+995 568 27 29 31</span>
+                </a>
+            </div>
+            <div class="contact-socials-new">
+                <a href="https://www.facebook.com/profile.php?id=61576850555855" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+        <div class="contact-form-wrapper">
+            <form action="https://formspree.io/f/xnnvleny" method="POST" class="new-contact-form">
+                <input type="text" name="name" class="form-input-new" required placeholder="Full name" data-placeholder-key="form_fullname">
+                <input type="email" name="email" class="form-input-new" required placeholder="Email" data-placeholder-key="form_email">
+                <input type="text" name="wanted_fragrance" class="form-input-new" placeholder="Wanted fragrance (optional)" data-placeholder-key="form_fragrance">
+                <button type="submit" class="btn-submit-new" data-key="form_button">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <span class="footer-copyright" data-key="footer_copyright">© 2025 hellsShop</span>
+        <span class="footer-separator">•</span>
+        <a href="https://osgweb.ge" class="footer-credit" target="_blank" rel="noopener noreferrer">
+            <span class="powered-by-text" data-key="powered_by">Powered by</span>
+            <img src="images/Screenshot_2025-06-25_154507-removebg-preview.png" alt="OSG Agency Logo" class="agency-logo">
+        </a>
+    </div>
+</footer>
+<script src="script.js" defer></script>
+
+</body>
+</html>
