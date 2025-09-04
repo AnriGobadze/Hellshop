@@ -460,6 +460,9 @@ section {
 .footer-credit:hover .agency-logo {
     opacity: 1;
 }
+.hero-video:not(.is-stopped) {
+    cursor: pointer;
+}
 .footer-credit:hover .powered-by-text {
     color: var(--text-white);
 }

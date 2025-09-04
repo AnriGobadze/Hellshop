@@ -80,9 +80,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===========================
     //   HERO CINEMATIC ANIMATION
     // ===========================
-    const handleHeroAnimation = () => {
-        if (!heroVideo || !heroText) return;
-        setTimeout(() => heroText.classList.add('is-visible'), 1500);
+// AFTER (Use this new version)
+const handleHeroAnimation = () => {
+    if (!heroVideo || !heroText) return;
+
+    // This function contains the animation logic we want to run
+    const startAnimations = () => {
+        // Now that the video is playing, we can safely run our timed sequence
+        setTimeout(() => {
+            heroText.classList.add('is-visible');
+        }, 1500);
+
         gsap.to(heroVideo, {
             playbackRate: 0,
             duration: 1.5,
@@ -94,6 +102,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     };
+
+    const playPromise = heroVideo.play();
+
+    if (playPromise !== undefined) {
+        playPromise.then(() => {
+            heroVideo.addEventListener('canplaythrough', startAnimations, { once: true });
+        }).catch(error => {
+            console.warn("Autoplay was blocked. Waiting for user interaction.", error);
+        });
+    }
+};
 
     // ===========================
     //   SCROLL REVEAL: FRAGRANCE CARDS
